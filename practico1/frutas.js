@@ -1,0 +1,11 @@
+let frutas = [];
+frutas.push("manzana");
+frutas.push("limon");
+frutas.push("naranja");
+frutas.push("uva");
+frutas.push("patilla");
+console.log(frutas);
+let ultima = frutas [4];
+console.log("La ultima fruta agregada fue:" + " " + ultima);
+let primera = frutas [0];
+console.log("La primera fruta agregada fue:" + " " + primera);
