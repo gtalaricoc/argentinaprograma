@@ -1,33 +1,10 @@
 const readlineSync = require('readline-sync');
-let mes = readlineSync.question("Ingresar un numero entero del 1 al 12\n");
-
-mes = {   
-    1:"enero",
-    2:"febrero", 
-    3:"marzo",
-    4:"abril",
-    5:"mayo",
-    6:"junio",
-    7:"julio",
-    8:"agosto",
-    9:"septiembre",
-    10:"octubre",
-    11:"noviembre",
-    12:"diciembre"
-}
-
-
-if (mes>=1 && mes<=12){
-    let cantidadDeDias = [];
-}
-
-if (mes == 2) {
-    cantidadDeDias == 28;
-  } else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-    cantidadDeDias == 30;
-  } else {
-    cantidadDeDias == 31;
-  }
-
-console.log("La cantidad de dias del mes de " + mes + " es " + cantidadDeDias);
-
+let numero = readlineSync.question("Ingresar un numero entero del 1 al 12\n");
+numero = Number(numero);
+if (numero >=1 && numero <= 12){
+    let meses = [ "enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"];
+    let mes =meses[numero - 1];
+    let diasMeses = [31,28,31,30,31,30,31,31,30,31,30,31];
+    let dias = diasMeses [numero - 1];
+    console.log("La cantidad de dias del mes de %s es %i.", mes, dias);
+    }
